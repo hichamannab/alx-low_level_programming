@@ -1,51 +1,38 @@
+#include <time.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
  * main - Entry point
- *
- * Description: print all possibile different
- *		combinations of two digits.
- *
- * Return: Alawys 0 (success)
-*/
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
+
 {
-	int digit1 = 0;
-	int digit2, digit3;
+	int d, p, q;
 
-	while (digit1 <= 9)
+	for (d = '0'; d < '9'; d++)
 	{
-		digit2 = 0;
-		while (digit2 <= 9)
-		{
-			digit3 = 0;
-			while (digit3 <= 9)
-			{
-				if (digit1 != digit2 &&
-				    digit1 < digit2 &&
-				    digit2 != digit3 &&
-				    digit2 < digit3)
-				{
-						putchar(digit1 + 48);
-						putchar(digit2 + 48);
-						putchar(digit3 + 48);
 
-						if (digit1 + digit2 + digit3 != 24)
-						{
+	for (p = d + 1; p <= '9'; p++)
+	{
 
-							putchar(',');
-							putchar(' ');
-
-						}
-				}
-				digit3++;
-			}
-			digit2++;
-		}
-		digit1++;
+	for (q = p + 1; q <= '9'; q++)
+	{
+	if ((p != d) != q)
+	{
+	putchar(d);
+	putchar(p);
+	putchar(q);
+	if (d == '7' && p == '8')
+	continue;
+	putchar(',');
+	putchar(' ');
+	}
+	}
+	}
 	}
 	putchar('\n');
-
 	return (0);
 }
