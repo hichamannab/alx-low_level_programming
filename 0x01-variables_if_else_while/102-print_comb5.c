@@ -1,42 +1,33 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 /**
  * main - Entry point
- *
- * Description: write a program that prints all possible
- * different cobinations of two dgits
- *
- * Return: Alawys 0 (Success)
-*/
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
+
 {
-	int firstDigit = 0, seconDigit;
+	int p, q;
 
-	while (firstDigit <= 99)
+	for (p = 0; p <= 98; p++)
 	{
-		seconDigit = firstdigit;
-		while (seconDigit <= 99)
-		{
-			if (seconDigit != firstDigit)
-			{
-				putchar((firstDigit / 10) + 48);
-				putchar((firstDigit % 10) + 48);
-				putchar(' ');
-				putchar((seconDigit / 10) + 48);
-				putchar((seconDigit % 10) + 48);
 
-				if (firstDigit != 98 || seconDigit != 99)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			seconDigit++;
-		}
-		firstDigit++;
+	for (q = p + 1; q <= 99; q++)
+	{
+	putchar((p / 10) + '0');
+	putchar((p % 10) + '0');
+	putchar(' ');
+	putchar((q / 10) + '0');
+	putchar((q % 10) + '0');
+	if (p == 98 && q == 99)
+	continue;
+	putchar(',');
+	putchar(' ');
+	}
 	}
 	putchar('\n');
-
 	return (0);
 }
