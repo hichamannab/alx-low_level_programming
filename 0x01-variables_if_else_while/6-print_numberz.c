@@ -19,6 +19,6 @@ int main(void)
 		putchar(digit + '0');
 		digit++;
 	}
-	putcha('\n');
+	putchar('\n');
 	return (0);
 }
