@@ -6,14 +6,17 @@
  *
  * Return: Alawys 0
 */
-int main(void) 
+int main(void)
 {
 
-	char c;
-	for (c = 'a'; c <= 'z'; c++)
-{
-    putchar(c);
-    }
+	char ch = 'a';
+
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
 	putchar('\n');
-	return 0;
+
+	return (0);
 }
