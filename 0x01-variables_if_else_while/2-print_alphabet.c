@@ -2,19 +2,18 @@
 /**
  * main - Entry ponit
  *
- * Description: print all alphabet letters
+ * Description: `Print alphabets lowercase`
  *
  * Return: Alawys 0
 */
-int main(void)
+int main(void) 
 {
-	char ch = 'a';
 
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		ch++
-	}
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
+{
+    putchar(c);
+    }
 	putchar('\n');
-	return (0);
+	return 0;
 }
